@@ -1,0 +1,40 @@
+name: novel-coauthoring-evals
+
+on:
+  push:
+    paths:
+      - "skills/novel-coauthoring-openclaw/**"
+      - "skills/novel-coauthoring-openclaw-workspace/**"
+      - ".github/workflows/novel-coauthoring-evals.yml"
+  pull_request:
+    paths:
+      - "skills/novel-coauthoring-openclaw/**"
+      - "skills/novel-coauthoring-openclaw-workspace/**"
+  workflow_dispatch:
+    inputs:
+      run_stress:
+        description: "Run stress benchmark job"
+        required: false
+        default: "false"
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run executable matrix checks
+        run: python skills/novel-coauthoring-openclaw/evals/run_evals.py
+
+  stress:
+    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.run_stress == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run stress benchmark
+        run: python skills/novel-coauthoring-openclaw/evals/run_stress.py

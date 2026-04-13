@@ -1,0 +1,24 @@
+skill:
+  mode: core_with_plugins
+  trigger_mode: hybrid
+  primary_entry: openclaw
+
+output:
+  primary_format: markdown
+  enable_yaml_block: true
+  prose_must_be_natural_paragraphs: true
+
+risk_policy:
+  low_risk_auto_apply: true
+  high_risk_requires_confirm: true
+
+plugins:
+  enabled:
+    - character
+    - plot
+    - world
+  allow_core_fallback_on_plugin_failure: true
+
+runtime:
+  default_single_agent_for_daily_discuss: true
+  allow_multi_agent_for_ideation_workshop: true

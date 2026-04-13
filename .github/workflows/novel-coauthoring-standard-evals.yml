@@ -1,0 +1,23 @@
+name: novel-coauthoring-standard-evals
+
+on:
+  push:
+    paths:
+      - "skills/novel-coauthoring-standard/**"
+      - "skills/novel-coauthoring-standard-workspace/**"
+      - ".github/workflows/novel-coauthoring-standard-evals.yml"
+  pull_request:
+    paths:
+      - "skills/novel-coauthoring-standard/**"
+      - "skills/novel-coauthoring-standard-workspace/**"
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run standard executable matrix checks
+        run: python skills/novel-coauthoring-standard/evals/run_evals.py

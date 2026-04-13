@@ -1,0 +1,78 @@
+{
+  "suite": "novel-coauthoring-openclaw-contract",
+  "version": 1,
+  "cases": [
+    {
+      "id": "contract.audit.rollback.chain",
+      "input": {
+        "command": "novel audit show --session-id sess_demo_001"
+      },
+      "expect": {
+        "status": "ok",
+        "required_fields": [
+          "request_id",
+          "session_id",
+          "result.input_summary",
+          "result.model_route",
+          "result.persist_result"
+        ],
+        "forbidden_error_codes": [
+          "AUDIT_NOT_FOUND"
+        ]
+      }
+    },
+    {
+      "id": "contract.asset.consistency",
+      "input": {
+        "command": "novel asset check consistency --scope book"
+      },
+      "expect": {
+        "status": "ok",
+        "required_fields": [
+          "result.conflicts",
+          "result.conflicts[0].level",
+          "result.conflicts[0].fix",
+          "result.conflicts[0].affected_paths"
+        ]
+      }
+    },
+    {
+      "id": "integration.openclaw.retry.idempotent",
+      "input": {
+        "command": "novel discuss plot --chapter ch18 --goal 保持当下叙事推进",
+        "headers": [
+          "X-Client-Id",
+          "X-Timestamp",
+          "X-Nonce",
+          "X-Signature"
+        ],
+        "idempotency_key": "idem_demo_001"
+      },
+      "expect": {
+        "replay_call": {
+          "idempotent_replay": true
+        },
+        "required_fields": [
+          "metrics.latency_ms",
+          "metrics.prompt_tokens",
+          "metrics.completion_tokens"
+        ]
+      }
+    },
+    {
+      "id": "quality.present-tense.body",
+      "input": {
+        "command": "novel diagnose pacing --chapter ch18"
+      },
+      "expect": {
+        "body_rules": {
+          "must_be_paragraph": true,
+          "forbidden_words": [
+            "以后",
+            "未来会"
+          ]
+        }
+      }
+    }
+  ]
+}

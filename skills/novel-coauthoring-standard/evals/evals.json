@@ -1,0 +1,35 @@
+{
+  "skill_name": "novel-coauthoring-standard",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我这本玄幻书里女主像工具人，帮我重做角色卡动机和成长弧线，给三套方案并说明对主线影响。",
+      "expected_output": "返回角色讨论结果，包含至少三套方案、风险与下一步建议。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "第18章后半段节奏垮了，做段落级诊断并给替换骨架，正文示例必须是自然段落。",
+      "expected_output": "返回节奏诊断、替换骨架，并保证正文示例使用自然段落。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我想用任意 Agent 调用这个技能，给我一次失败重试和幂等重放的预期返回格式。",
+      "expected_output": "返回含 request_id/session_id/idempotent_replay 等字段的结构化输出说明。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我已经定好场景目标和结局。请加载五个角色，模拟他们在矿场夜审里的对话、动作和行为，并标出谁有 OOC 风险。",
+      "expected_output": "返回回合级群像模拟结果，并附 OOC 风险清单与替代建议；不改作者给定目标和结局。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "把这本书当前资料做成大纲看板：我要同时看纵向事件线和某个时点的横向系统态，标记断链和高风险项。",
+      "expected_output": "返回横纵双维大纲视图（vertical+horizontal）与风险标记，不改作者既定目标和结局。",
+      "files": []
+    }
+  ]
+}

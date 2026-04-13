@@ -1,0 +1,10 @@
+{
+  "eval_id": 3,
+  "eval_name": "openclaw-signed-retry-metrics",
+  "prompt": "给出 OpenClaw 签名鉴权请求、超时重试、幂等重放与性能告警的一次完整返回。",
+  "assertions": [
+    "输出包含签名鉴权头与 idempotency_key",
+    "输出包含重试与 idempotent_replay 结果",
+    "输出包含 latency/token 指标与降级建议"
+  ]
+}

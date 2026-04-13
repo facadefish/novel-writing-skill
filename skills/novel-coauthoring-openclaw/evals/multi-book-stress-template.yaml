@@ -1,0 +1,34 @@
+benchmark:
+  id: multi_book_parallel_v0
+  goal:
+    p95_latency_ms: 9000
+    avg_prompt_tokens: 9000
+    avg_completion_tokens: 2600
+  setup:
+    books:
+      - book_id: xh_001
+      - book_id: ds_009
+      - book_id: wx_017
+    commands:
+      - novel discuss plot --chapter ch18 --goal 强推进
+      - novel diagnose pacing --chapter ch18
+      - novel asset check consistency --scope chapter
+    rounds: 20
+  output_fields:
+    - request_id
+    - session_id
+    - book_id
+    - command
+    - latency_ms
+    - prompt_tokens
+    - completion_tokens
+    - cache_hit
+    - degrade_level
+  report:
+    required:
+      - p50_latency_ms
+      - p95_latency_ms
+      - p99_latency_ms
+      - avg_prompt_tokens
+      - avg_completion_tokens
+      - alert_rate

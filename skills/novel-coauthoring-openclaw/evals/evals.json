@@ -1,0 +1,23 @@
+{
+  "skill_name": "novel-coauthoring-openclaw",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我这本玄幻书里女主像工具人，帮我重做角色卡动机和成长弧线，给三套方案并说明对主线影响。",
+      "expected_output": "返回角色讨论结果，包含至少三套方案、风险与下一步建议。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "第18章后半段节奏垮了，做段落级诊断并给替换骨架，正文示例必须是自然段落。",
+      "expected_output": "返回节奏诊断、替换骨架，并保证正文示例使用自然段落。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我想用 OpenClaw 调用这个技能，给我一次失败重试和幂等重放的预期返回格式。",
+      "expected_output": "返回含 request_id/session_id/idempotent_replay 等字段的结构化输出说明。",
+      "files": []
+    }
+  ]
+}

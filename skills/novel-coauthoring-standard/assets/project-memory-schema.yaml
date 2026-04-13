@@ -1,0 +1,26 @@
+project:
+  book_id: ""
+  title: ""
+  genre: ""
+  updated_at: ""
+
+core:
+  world_rules: []
+  protagonist_motivation: ""
+  taboo_rules: []
+
+cast:
+  characters: []
+  relations: []
+  forbidden_ooc: []
+
+plot:
+  phase_goal: ""
+  conflicts: []
+  hook_pool: []
+
+state:
+  current_chapter: ""
+  confirmed_decisions: []
+  pending_decisions: []
+  snapshots: []
