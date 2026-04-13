@@ -31,7 +31,7 @@ novel ov --book-id xh_demo_001 --scope chapter --target ch018 --view both
 
 ## 版本与路线
 - 当前推荐：`novel-coauthoring-standard`
-- 兼容层：`novel-coauthoring-openclaw`（历史链路保留）
+- 历史 OpenClaw 版已归档清理，统一使用标准版。
 - 迁移说明：`skills/novel-coauthoring-standard/references/migration-from-openclaw.md`
 
 ## 开源协议

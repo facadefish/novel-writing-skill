@@ -26,7 +26,7 @@ def run(repo_root: Path) -> int:
         "contract.audit.rollback.chain": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-4" / "eval-1-audit-rollback" / "with_skill" / "outputs" / "response.md",
         "contract.asset.consistency": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-4" / "eval-2-multi-book-memory-switch" / "with_skill" / "outputs" / "response.md",
         "integration.agent.retry.idempotent": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-4" / "eval-3-openclaw-signed-retry-metrics" / "with_skill" / "outputs" / "response.md",
-        "quality.present-tense.body": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-3" / "eval-2-present-tense-pacing" / "with_skill" / "outputs" / "response.md",
+        "quality.present-tense.body": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-5" / "eval-6-present-tense-body" / "with_skill" / "outputs" / "response.md",
         "feature.scene.simulate": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-5" / "eval-4-scene-simulate" / "with_skill" / "outputs" / "response.md",
         "feature.outline.board": repo_root / "skills" / "novel-coauthoring-standard-workspace" / "iteration-5" / "eval-5-outline-board" / "with_skill" / "outputs" / "response.md",
     }

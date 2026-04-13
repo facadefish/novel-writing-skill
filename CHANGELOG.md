@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.3.1] - 2026-04-13
+- Cleaned legacy repository residues to make structure easier to understand.
+- Removed old OpenClaw skill/workspace directories from main branch.
+- Removed duplicated historical iteration samples and kept focused acceptance sets.
+- Updated quality eval target to a kept sample under iteration-5.
+
 ## [0.3.0] - 2026-04-13
 - Added `novel scene simulate` (`novel ss`) as single-entry multi-cast simulation.
 - Added `novel outline view` (`novel ov`) with `vertical|horizontal|both` modes.

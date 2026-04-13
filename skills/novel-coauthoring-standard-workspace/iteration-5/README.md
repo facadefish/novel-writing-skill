@@ -7,3 +7,4 @@
 ## 用例目录
 - Eval 4：`eval-4-scene-simulate/with_skill/outputs/response.md`
 - Eval 5：`eval-5-outline-board/with_skill/outputs/response.md`
+- Eval 6：`eval-6-present-tense-body/with_skill/outputs/response.md`
